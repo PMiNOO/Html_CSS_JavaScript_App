@@ -40,9 +40,8 @@
                     <label for="publishDate">출판일:</label>
                     <input type="date" name="publishDate" id="publishDate" required>
                 </div>
-
-                <button type="submit">도서 등록</button>
             </div>
+            <button type="submit">도서 등록</button>
         </form>
     </div>
 
@@ -59,10 +58,13 @@
                     <th>액션</th>
                 </tr>
             </thead>
-            <tbody>
+            <!-- The tbody now has an ID to be targeted by JavaScript -->
+            <tbody id="bookTableBody">
             </tbody>
         </table>
     </div>
+
+    <script src="./js/form.js"></script>
 </body>
 
 </html>
