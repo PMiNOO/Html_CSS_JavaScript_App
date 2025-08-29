@@ -1,24 +1,80 @@
-﻿body {
-    font-family: "맑은 고딕", "돋움", "굴림";               
-    /*
-    background: bg-color bg-image position/bg-size bg-repeat bg-origin bg-clip bg-attachment
-       bg-images : url('../images/bg.jpg') 
-       bg-repeat : no-repeat : 
-       bg-position (배경 위치) : left(가로위치-왼쪽) top(세로위치-상단) : 
-       bg-attachment (배경 고정) : fixed 페이지를 스크롤해도 배경은 움직이지 않음
-    */
-    
-    /*
-    background-size
-    : cover
-        비율 유지하며 요소 전체를 덮음
-        이미지 일부가 잘릴 수 있음
-        풀스크린 배경에 최적
-    : contain
-        비율 유지하며 요소 안에 완전 포함
-        여백이 생길 수 있음
-        로고, 아이콘에 최적
-    */
-    
+﻿/* 기본 스타일 */
+body {
+    background-image: url("../images/bg.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-family: "맑은 고딕", "Malgun Gothic", Gothic, sans-serif;
+    margin: 0;
+    padding: 0;
 }
 
+#wrapper {
+    width: 800px;
+    margin: 20px auto;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
+    font-size: 2.5em;
+    text-align: center;
+    color: #333;
+}
+
+/* 네비게이션 */
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+    border-radius: 5px;
+}
+
+nav ul li {
+    float: left;
+}
+
+nav a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    transition: background-color 0.3s;
+}
+
+nav a:hover {
+    background-color: #111;
+}
+
+nav a.current {
+    background-color: #4CAF50;
+}
+
+
+/* 컨텐츠 영역 */
+section {
+    padding: 20px;
+    min-height: 400px;
+}
+
+article h2 {
+    padding-left: 30px;
+    background-image: url('../images/icon.png');
+    background-repeat: no-repeat;
+    background-position: left center;
+    background-size: 20px; /* 아이콘 크기 조절 */
+    margin-bottom: 20px;
+}
+
+/* 푸터 */
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #333;
+    color: white;
+    border-radius: 0 0 10px 10px;
+}
